@@ -12,7 +12,7 @@
 
 (() => {
     let title = document.title;
-    title = title.indexOf('条消息)') === 2 ? title.split('条消息)')[1] : 0;
+    title = title.indexOf('条消息)') === 2 ? title.split('条消息)')[1] : title;
     document.title = title;
     document.querySelector('#msg-circle').remove();
 
