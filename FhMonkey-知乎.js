@@ -14,7 +14,13 @@
     const STYLE = document.createElement('style');
     const CSS = `
         [data-zop*='故事档案局'] {
-            display: none;
+            display: none !important;
+        }
+        [data-zop*='全民故事计划'] {
+            display: none !important;
+        }
+        .TopstoryItem--advertCard{
+            display: none !important;
         }
     `;
     STYLE.innerHTML = CSS;
