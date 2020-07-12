@@ -19,6 +19,9 @@
         [data-zop*='全民故事计划'] {
             display: none !important;
         }
+        [data-zop*='惊人院'] {
+            display: none !important;
+        }
         .TopstoryItem--advertCard{
             display: none !important;
         }
