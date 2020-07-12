@@ -12,20 +12,26 @@
 
 (() => {
     const STYLE = document.createElement('style');
-    const CSS = `
-        [data-zop*='故事档案局'] {
+    const map = {
+        name: ['故事档案局', '全民故事计划', '惊人院'],
+        normal: ['.TopstoryItem--advertCard'],
+    };
+    let CSS = '';
+    for (const v of map.name) {
+        CSS += `
+				[data-zop*='${v}'] {
             display: none !important;
         }
-        [data-zop*='全民故事计划'] {
+			`;
+    }
+    for (const v of map.normal) {
+        CSS += `
+				${v} {
             display: none !important;
         }
-        [data-zop*='惊人院'] {
-            display: none !important;
-        }
-        .TopstoryItem--advertCard{
-            display: none !important;
-        }
-    `;
+			`;
+    }
     STYLE.innerHTML = CSS;
     document.body.appendChild(STYLE);
 })();
+
