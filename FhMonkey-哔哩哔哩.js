@@ -20,7 +20,7 @@
 
   const closeDanMu = async () => {
       const DanMu = document.querySelector(
-          '.bilibili-player-video-danmaku-switch .bui-checkbox'
+          '.bilibili-player-video-danmaku-switch input'
       );
       if (DanMu) {
           const checked = DanMu.checked;
