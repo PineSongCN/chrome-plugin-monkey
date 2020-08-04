@@ -13,7 +13,7 @@
 (() => {
     const STYLE = document.createElement('style');
     const map = {
-        name: ['故事档案局', '全民故事计划', '惊人院'],
+        name: ['故事档案局', '全民故事计划', '惊人院', '盐选推荐'],
         normal: ['.TopstoryItem--advertCard'],
     };
     let CSS = '';
