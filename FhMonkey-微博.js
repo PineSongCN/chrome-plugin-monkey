@@ -16,6 +16,9 @@
         [feedtype='ad'] {
             display: none;
         }
+        .WB_cardwrap:nth-child(1) {
+            display: block;
+        }
     `;
     STYLE.innerHTML = CSS;
     document.body.appendChild(STYLE);
