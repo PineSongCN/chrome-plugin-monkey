@@ -14,8 +14,6 @@
     let title = document.title;
     title = title.indexOf('条消息)') === 2 ? title.split('条消息)')[1] : title;
     document.title = title;
-    document.querySelector('#msg-circle').remove();
-
-    document.querySelector('.hide-article-box').remove();
+    document.querySelector('#toolbar-remind').remove();
     document.querySelector('#article_content').style.height = 'auto';
 })();
