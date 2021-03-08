@@ -13,11 +13,13 @@
 (() => {
     const STYLE = document.createElement('style');
     const CSS = `
-        [feedtype='ad'] {
+        .WB_cardwrap[feedtype='ad'] {
             display: none;
         }
-        .WB_cardwrap:nth-child(1) {
+        .WB_cardwrap[data-mark*='mark=1'] {
             display: block;
+        }
+        .WB_cardwrap:nth-child(1) {
         }
     `;
     STYLE.innerHTML = CSS;
