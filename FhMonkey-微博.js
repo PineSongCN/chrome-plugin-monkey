@@ -11,18 +11,26 @@
 
 
 (() => {
-    const STYLE = document.createElement('style');
-    const CSS = `
-        .WB_cardwrap[feedtype='ad'] {
-            display: none;
+    // const STYLE = document.createElement('style');
+    // const CSS = `
+    //     .WB_cardwrap[feedtype='ad'] {
+    //         display: none;
+    //     }
+    //     .WB_cardwrap[data-mark*='mark=1'] {
+    //         display: block;
+    //     }
+    //     .WB_cardwrap:nth-child(1) {
+    //     }
+    // `;
+    // STYLE.innerHTML = CSS;
+    // document.body.appendChild(STYLE);
+    if (document.getElementById('pl_band_index')) {
+        const a = Object.values(
+            document.getElementById('pl_band_index').getElementsByTagName('a')
+        );
+        for (const v of a) {
+            v.title = v.innerText;
         }
-        .WB_cardwrap[data-mark*='mark=1'] {
-            display: block;
-        }
-        .WB_cardwrap:nth-child(1) {
-        }
-    `;
-    STYLE.innerHTML = CSS;
-    document.body.appendChild(STYLE);
+    }
 })();
 
