@@ -16,7 +16,12 @@
         name: ['故事档案局', '全民故事计划', '惊人院', '盐选推荐', '真实职业故事'],
         normal: ['.TopstoryItem--advertCard'],
     };
-    let CSS = '';
+    let CSS = `
+        .Feed[data-za-extra-module*=Zvideo],
+        .Feed[data-za-extra-module*=video_id] {
+            display: none;
+        }
+    `;
     for (const v of map.name) {
         CSS += `
 				[data-zop*='${v}'] {
