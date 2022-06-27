@@ -16,4 +16,13 @@
     document.title = title;
     document.querySelector('#toolbar-remind').remove();
     document.querySelector('#article_content').style.height = 'auto';
+
+    const STYLE = document.createElement('style');
+    let CSS = `
+        .type_download {
+            display: none !important;
+        }
+    `;
+    STYLE.innerHTML = CSS;
+    document.body.appendChild(STYLE);
 })();
