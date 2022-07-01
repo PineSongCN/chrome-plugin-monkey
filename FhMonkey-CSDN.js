@@ -11,18 +11,21 @@
 
 
 (() => {
-    let title = document.title;
-    title = title.indexOf('条消息)') === 2 ? title.split('条消息)')[1] : title;
-    document.title = title;
-    document.querySelector('#toolbar-remind').remove();
-    document.querySelector('#article_content').style.height = 'auto';
-
     const STYLE = document.createElement('style');
     let CSS = `
         .type_download {
             display: none !important;
         }
+        * {
+            user-select: unset !important;
+        }
     `;
     STYLE.innerHTML = CSS;
     document.body.appendChild(STYLE);
+    
+    let title = document.title;
+    title = title.indexOf('条消息)') === 2 ? title.split('条消息)')[1] : title;
+    document.title = title;
+    document.querySelector('#toolbar-remind').remove();
+    document.querySelector('#article_content').style.height = 'auto';
 })();
