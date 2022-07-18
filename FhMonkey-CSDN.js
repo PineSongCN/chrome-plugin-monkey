@@ -21,9 +21,9 @@
             user-select: unset !important;
         }
 
-		.article_content {
-			height: auto !important;
-		}
+        .article_content {
+            height: auto !important;
+        }
     `;
     STYLE.innerHTML = CSS;
     document.body.appendChild(STYLE);
