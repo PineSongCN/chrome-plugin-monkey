@@ -13,12 +13,17 @@
 (() => {
     const STYLE = document.createElement('style');
     let CSS = `
-        .type_download {
+        .type_download, .hide-article-box {
             display: none !important;
         }
+
         * {
             user-select: unset !important;
         }
+
+		.article_content {
+			height: auto !important;
+		}
     `;
     STYLE.innerHTML = CSS;
     document.body.appendChild(STYLE);
