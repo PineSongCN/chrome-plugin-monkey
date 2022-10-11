@@ -4,11 +4,10 @@
 // @name            微博
 // @url-pattern     https://*weibo.com/*
 // @enable          true
-// @require-js      
+// @require-js
 // @auto-refresh    0
 // @updated         2020-05-12 09:33:28
 // ==/FeHelperMonkey==
-
 
 (() => {
     // const STYLE = document.createElement('style');
@@ -32,5 +31,12 @@
             v.title = v.innerText;
         }
     }
+    if (location.pathname === '/login.php') {
+        var a = document.querySelector('.login_innerwrap').innerHTML;
+        a = a.split('<!-- <div class="info_list other_login clearfix"');
+        a[1] = a[1].replace(/<!--/g, '').replace(/-->/g, '').replace(/\t/g, '');
+        a = a.join('<div class="info_list other_login clearfix"');
+        document.querySelector('.login_innerwrap').innerHTML = a;
+        document.querySelector('.other_login').style.display = 'block';
+    }
 })();
-

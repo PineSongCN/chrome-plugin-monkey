@@ -1,0 +1,16 @@
+{
+    "name": "chrome-plugin-monkey",
+    "version": "1.0.0",
+    "repository": "git@github.com:PineSongCN/chrome-plugin-monkey.git",
+    "author": "Song Xu <song.xu@kyligence.io>",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint --fix --ext .js ."
+    },
+    "devDependencies": {
+        "eslint": "^8.25.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-config-prettier": "^8.5.0",
+        "prettier": "^2.7.1"
+    }
+}

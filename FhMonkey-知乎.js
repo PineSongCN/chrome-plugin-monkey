@@ -38,5 +38,19 @@
     }
     STYLE.innerHTML = CSS;
     document.body.appendChild(STYLE);
+  	if(location.pathname === '/') {
+    	var container = document.querySelector('.Topstory-container');
+        var childNodes = [...container.parentElement.childNodes];
+        var index = childNodes.findIndex((el) => el === container);
+        if (index > 0) {
+            var svg = childNodes[0].querySelector('svg');
+            if (svg) {
+            	var e = document.createEvent('SVGEvents');
+            	e.initEvent('click', true, true);
+            	svg.dispatchEvent(e);
+          	} else {
+            	childNodes[0].style.display = 'none';
+          	}
+        }
+    }
 })();
-

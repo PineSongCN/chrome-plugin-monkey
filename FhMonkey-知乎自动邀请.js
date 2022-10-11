@@ -22,24 +22,24 @@ const invite = async (elList = []) => {
     const length = elList.length;
     if (length === 0) {
         await sleep(1);
-        const $QuestionInvitation = $(".QuestionInvitation-content");
+        const $QuestionInvitation = $('.QuestionInvitation-content');
         if ($QuestionInvitation.length) {
-            const list = $(".QuestionInvitation-content").find(".List-item");
+            const list = $('.QuestionInvitation-content').find('.List-item');
             invite(list);
         } else {
-            const $QuestionHeaderActions = $(".QuestionHeaderActions");
-            $QuestionHeaderActions.find("button").eq(0).click();
+            const $QuestionHeaderActions = $('.QuestionHeaderActions');
+            $QuestionHeaderActions.find('button').eq(0).click();
             sleep(5);
             invite();
         }
     } else if (length < 10) {
-        $(".QuestionMainAction").click();
+        $('.QuestionMainAction').click();
         await sleep(1);
-        const list = $(".QuestionInvitation-content").find(".List-item");
+        const list = $('.QuestionInvitation-content').find('.List-item');
         invite(list);
     } else {
         for (const el of elList) {
-            $(el).find(".ContentItem-extra").find("button").click();
+            $(el).find('.ContentItem-extra').find('button').click();
             await sleep(2);
         }
         await sleep(60);

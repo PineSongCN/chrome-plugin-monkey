@@ -11,7 +11,7 @@
 
 
 // Set a fake timeout to get the highest timeout id
-var highestTimeoutId = setTimeout(";");
+var highestTimeoutId = setTimeout(';');
 for (var i = 0 ; i < highestTimeoutId ; i++) {
     clearTimeout(i); 
 }
