@@ -13,7 +13,7 @@
 (() => {
     const STYLE = document.createElement('style');
     let CSS = `
-        .type_download, .hide-article-box {
+        .type_download, .hide-article-box,.user-desc,.article-show-more,.user-action >*:not(li),.top-sticky,.toolbar-advert,.hide-preCode-box {
             display: none !important;
         }
 
@@ -21,9 +21,10 @@
             user-select: unset !important;
         }
 
-        .article_content {
+        .article_content,.main-content,.set-code-hide {
             height: auto !important;
         }
+	
     `;
     STYLE.innerHTML = CSS;
     document.body.appendChild(STYLE);
@@ -34,3 +35,4 @@
     document.querySelector('#toolbar-remind').remove();
     document.querySelector('#article_content').style.height = 'auto';
 })();
+
