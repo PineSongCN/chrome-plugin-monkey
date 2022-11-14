@@ -21,7 +21,7 @@
             user-select: unset !important;
         }
 
-        .article_content,.main-content,.set-code-hide {
+        .article_content,.main-content,.set-code-hide,.user-article {
             height: auto !important;
         }
 	
@@ -35,4 +35,5 @@
     document.querySelector('#toolbar-remind').remove();
     document.querySelector('#article_content').style.height = 'auto';
 })();
+
 
