@@ -13,7 +13,7 @@
 (() => {
     const STYLE = document.createElement('style');
     let CSS = `
-        .type_download, .hide-article-box,.user-desc,.article-show-more,.user-action >*:not(li),.top-sticky,.toolbar-advert,.hide-preCode-box {
+        .type_download, .hide-article-box,.user-desc,.article-show-more,.user-action >*:not(li),.top-sticky,.toolbar-advert,.hide-preCode-box,[class*="advert"] {
             display: none !important;
         }
 
@@ -35,5 +35,6 @@
     document.querySelector('#toolbar-remind').remove();
     document.querySelector('#article_content').style.height = 'auto';
 })();
+
 
 
