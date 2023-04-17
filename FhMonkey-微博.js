@@ -40,7 +40,7 @@
         document.querySelector('.other_login').style.display = 'block';
     }
 
-    if (location.pathname.startsWith('/u/')) {
+    if (location.pathname.startsWith('/u/') || location.pathname.startsWith('/n/')) {
         setTimeout(() => {
             var b = document.querySelector('.woo-panel-main .woo-avatar-main');
 
@@ -58,7 +58,4 @@
         }, 1000);
 
     }
-
-
-
 })();
