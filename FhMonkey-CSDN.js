@@ -21,8 +21,9 @@
             user-select: unset !important;
         }
 
-        .article_content,.main-content,.set-code-hide,.user-article {
+        .article_content, .main-content, .set-code-hide, .user-article {
             height: auto !important;
+            max-height: unset !important;
         }
 	
     `;
@@ -32,7 +33,7 @@
     let title = document.title;
     title = title.indexOf('条消息)') === 2 ? title.split('条消息)')[1] : title;
     document.title = title;
-    document.querySelector('#toolbar-remind').remove();
+    document.querySelector('#toolbar-remind')?.remove();
     document.querySelector('#article_content').style.height = 'auto';
 })();
 
