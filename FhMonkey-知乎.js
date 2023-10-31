@@ -21,6 +21,9 @@
         .Feed[data-za-extra-module*=video_id] {
             display: none;
         }
+        [data-za-extra-module*="Post"] {
+          display: none !important;
+        }
     `;
     for (const v of map.name) {
         CSS += `
