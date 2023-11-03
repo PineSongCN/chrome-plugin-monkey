@@ -21,23 +21,27 @@
         .Feed[data-za-extra-module*=video_id] {
             display: none;
         }
-        [data-za-extra-module*="Post"] {
-          display: none !important;
-        }
     `;
+    if (location.pathname === '/') {
+        CSS += `
+            [data-za-extra-module*="Post"] {
+              display: none !important;
+            }
+		`;
+    }
     for (const v of map.name) {
         CSS += `
 				[data-zop*='${v}'] {
             display: none !important;
-        }
-			`;
+        	}
+		`;
     }
     for (const v of map.normal) {
         CSS += `
 				${v} {
             display: none !important;
-        }
-			`;
+        	}
+		`;
     }
     STYLE.innerHTML = CSS;
     document.body.appendChild(STYLE);
