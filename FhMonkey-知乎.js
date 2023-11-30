@@ -27,6 +27,12 @@
             [data-za-extra-module*="Post"] {
               display: none !important;
             }
+            [data-za-extra-module*="5Qcm9tb3Rpb25FeHRyYR"] {
+              display: none !important;
+            }
+            [data-za-extra-module*="UHJvbW90aW9uRXh0cm"] {
+              display: none !important;
+            }
 		`;
     }
     for (const v of map.name) {
