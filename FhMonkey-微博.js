@@ -10,19 +10,14 @@
 // ==/FeHelperMonkey==
 
 (() => {
-    // const STYLE = document.createElement('style');
-    // const CSS = `
-    //     .WB_cardwrap[feedtype='ad'] {
-    //         display: none;
-    //     }
-    //     .WB_cardwrap[data-mark*='mark=1'] {
-    //         display: block;
-    //     }
-    //     .WB_cardwrap:nth-child(1) {
-    //     }
-    // `;
-    // STYLE.innerHTML = CSS;
-    // document.body.appendChild(STYLE);
+    const STYLE = document.createElement('style');
+    const CSS = `
+        .wbpro-scroller-item:has(header .woo-font--cross){
+            display: none!important;
+        }
+    `;
+    STYLE.innerHTML = CSS;
+    document.body.appendChild(STYLE);
     if (document.getElementById('pl_band_index')) {
         const a = Object.values(
             document.getElementById('pl_band_index').getElementsByTagName('a')
@@ -39,23 +34,26 @@
         document.querySelector('.login_innerwrap').innerHTML = a;
         document.querySelector('.other_login').style.display = 'block';
     }
-
-    if (location.pathname.startsWith('/u/') || location.pathname.startsWith('/n/')) {
+    if (location.pathname !== '/') {
+      
         setTimeout(() => {
             var b = document.querySelector('.woo-panel-main .woo-avatar-main');
 
-            b.style.width = '100%';
-            b.style.height = '100%';
-            b.style['flex-shrink'] = '0';
+            if (b) {
+              b.style.width = '100%';
+              b.style.height = '100%';
+              b.style['flex-shrink'] = '0';
 
-            var a = document.querySelector(
-                '.woo-panel-main .woo-avatar-main'
-            ).parentNode;
-            a.style['flex-wrap'] = 'wrap';
+              var a = document.querySelector(
+                  '.woo-panel-main .woo-avatar-main'
+              ).parentNode;
+              a.style['flex-wrap'] = 'wrap';
 
-            var c = document.querySelector('.woo-panel-main .woo-avatar-main img');
-            c.src = c.src.replace('.180/', '.1800/');
+              var c = document.querySelector('.woo-panel-main .woo-avatar-main img');
+              c.src = c.src.replace('.180/', '.1800/');
+            }
         }, 1000);
-
     }
+
+
 })();
