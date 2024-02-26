@@ -34,7 +34,7 @@
         document.querySelector('.login_innerwrap').innerHTML = a;
         document.querySelector('.other_login').style.display = 'block';
     }
-    if (location.pathname.startswith('/u/') || location.pathname.startswith('/n/') || !Number.isNaN(Number(location.pathname.slice(1)))) {
+    if (location.pathname.startsWith('/u/') || location.pathname.startsWith('/n/') || !Number.isNaN(Number(location.pathname.slice(1)))) {
         setTimeout(() => {
             var b = document.querySelector('.woo-panel-main .woo-avatar-main');
             if (b) {
