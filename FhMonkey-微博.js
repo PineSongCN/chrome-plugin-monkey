@@ -34,26 +34,22 @@
         document.querySelector('.login_innerwrap').innerHTML = a;
         document.querySelector('.other_login').style.display = 'block';
     }
-    if (location.pathname !== '/') {
-      
+    if (location.pathname.startswith('/u/') || location.pathname.startswith('/n/') || !Number.isNaN(Number(location.pathname.slice(1)))) {
         setTimeout(() => {
             var b = document.querySelector('.woo-panel-main .woo-avatar-main');
-
             if (b) {
-              b.style.width = '100%';
-              b.style.height = '100%';
-              b.style['flex-shrink'] = '0';
+                b.style.width = '100%';
+                b.style.height = '100%';
+                b.style['flex-shrink'] = '0';
 
-              var a = document.querySelector(
-                  '.woo-panel-main .woo-avatar-main'
-              ).parentNode;
-              a.style['flex-wrap'] = 'wrap';
+                var a = document.querySelector(
+                    '.woo-panel-main .woo-avatar-main'
+                ).parentNode;
+                a.style['flex-wrap'] = 'wrap';
 
-              var c = document.querySelector('.woo-panel-main .woo-avatar-main img');
-              c.src = c.src.replace('.180/', '.1800/');
+                var c = document.querySelector('.woo-panel-main .woo-avatar-main img');
+                c.src = c.src.replace('.180/', '.1800/');
             }
         }, 1000);
     }
-
-
 })();
