@@ -121,7 +121,7 @@ class KeyboardAutomation {
     if (isKeyAlreadyDown) return;
 
     const localStartTime = Date.now();
-    const relativeTime = localStartTime - this.recordStartTime;
+    const relativeTime = localStartTime - this.state.recordStartTime;
     this.state.recordList.push({
       key: e.key,
       keyCode: e.keyCode,
